@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/word_addService" android:id="@+id/addService" />
+    <item android:title="@string/word_resPassw" android:id="@+id/settings" />
+    <item android:title="@string/word_aboutUs" android:id="@+id/aboutUs" />
+    <item android:title="@string/word_logout" android:id="@+id/logout" />
+
+</menu>

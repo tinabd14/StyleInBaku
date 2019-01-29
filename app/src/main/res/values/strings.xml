@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">StyleIn</string>
+
+    <string name="word_name">"Name"</string>
+    <string name="word_customer">Customer</string>
+    <string name="word_hairdresser">Hairdresser</string>
+    <string name="word_getStarted">Get Started</string>
+    <string name="word_username">username</string>
+    <string name="word_password">password</string>
+    <string name="word_email">email</string>
+    <string name="word_noAccount">Don\'t you have an account yet? Sign up here.</string>
+    <string name="word_login">Login</string>
+    <string name="word_signUp">Sign up</string>
+    <string name="word_image">Image</string>
+    <string name="word_officeName">Office name</string>
+    <string name="word_point">Point</string>
+    <string name="word_adminServices">Services\nLong press to make changes\nTap to delete</string>
+    <string name="word_price">Price</string>
+    <string name="word_services">Services</string>
+    <string name="word_contactUs">Contact us</string>
+    <string name="word_giveUsAFeedback">Give us a feedback</string>
+    <string name="word_save">Save</string>
+    <string name="word_makeRes">Services Tap to make reservation</string>
+    <string name="word_date">Date</string>
+    <string name="word_addComments">Add comments...</string>
+    <string name="word_rate">Rate</string>
+
+
+    //AboutUsActivity
+    <string name="word_aboutUs">About us</string>
+    <string name="word_call">Call</string>
+    <string name="word_make_call_to_admin">Make call to the administrator?</string>
+    <string name="word_permission_denied">Permission Denied!</string>
+
+
+
+    //AdminServicesActivity
+    <string name="word_edit_name_price">Please edit the service name and price</string>
+    <string name="word_edit">Edit</string>
+    <string name="word_choose_one_to_edit">Choose one to edit</string>
+    <string name="word_service_name">Service name</string>
+    <string name="word_change_service_name">Change service name</string>
+    <string name="word_edit_service_name">Edit service name</string>
+    <string name="word_cancel">Cancel</string>
+    <string name="word_change_price">Change price</string>
+    <string name="word_edit_price">Edit price</string>
+    <string name="word_delete">Delete</string>
+    <string name="word_delete_service">Delete the service?</string>
+    <string name="word_delete_success">Service deleted successfully</string>
+
+
+    //FeedbackActivity
+    <string name="word_you_have_no_unrated_res">You have no unrated reservation</string>
+    <string name="word_your_feedback">Your feedback: 0.0</string>
+    <string name="word_very_bad">Very Bad</string>
+    <string name="word_bad">Bad</string>
+    <string name="word_fairly_good">Fairly good</string>
+    <string name="word_satisfactory">Satisfactory</string>
+    <string name="word_good">Good</string>
+    <string name="word_excellent">Excellent</string>
+    <string name="word_rating">Rating</string>
+    <string name="word_your_rate">Your rate: </string>
+
+
+    //LoginActivity
+    <string name="word_welcome">Welcome</string>
+    <string name="word_verif_email">Please verify your e-mail first</string>
+    <string name="word_retry">Please re-try</string>
+
+
+    //MainActivity
+    <string name="word_homepage">Homepage</string>
+    <string name="word_welcomeBack">Welcome back</string>
+
+
+    //MaleOrFemaleActivity
+    <string name="word_quit">Quit</string>
+    <string name="word_do_you_want_to_quit">Do you want to quit?</string>
+
+
+    //MapsActivity
+    <string name="word_contact_number">Contact number: </string>
+
+
+    //OfficeActivity
+    <string name="word_changes_saved">Changes saved successfully!</string>
+    <string name="word_yourPointIs">Your point is: </string>
+    <string name="word_schedules">Manage schedules</string>
+
+
+    //ScheduleActivity
+    <string name="word_total_reservations">Total reservations: </string>
+    <string name="word_you_have_no_reservation">You don\'t have any reservation yet</string>
+    <string name="word_confirm">Confirm?</string>
+    <string name="word_confirm_res">Do you want to confirm the reservation?</string>
+    <string name="word_yes">Yes</string>
+    <string name="word_res_accepted">Reservation accepted</string>
+    <string name="word_succes">Success</string>
+    <string name="word_no">No</string>
+    <string name="word_res_cancelled">Reservation cancelled</string>
+
+    <string name="word_resDates">You have a reservation at  </string>
+
+
+
+    //ServicesActivity
+    <string name="word_make_res">Make reservation</string>
+    <string name="word_goOn">Go on</string>
+    <string name="word_reserve">Reserve</string>
+
+
+
+
+    //SignUpActivity
+    <string name="word_5letter">Username and password have to be minimum 5 letter long</string>
+    <string name="word_noEmptySpace">Username and password should not contain empty space</string>
+    <string name="word_accCreated">Account created successfully!\nPlease verify your email before login</string>
+    <string name="word_error">Error! </string>
+
+
+    //AboutUsActivity
+    <string name="word_aboutUs1">A simple application to make reservation to beauty homes, see the rates of registered offices and give them feedback!</string>
+    <string name="word_aboutUs2">Contact us by calling or e-mail about any issue related to the application any time you want</string>
+
+
+
+
+    //Menu
+    <string name="word_addService">Add service</string>
+    <string name="word_resPassw">Reset password</string>
+    <string name="word_logout">Log out</string>
+    <string name="word_checkEmail">Check to your email inbox to reset your password</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Ad
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+
+    //Back4App Parse
+    <string name="back4app_app_id" translatable="false">uoxiUGRjHZGwfPtPj3CBfxnUsg280m2yt7ACauez</string>
+    <string name="back4app_client_key" translatable="false">k4HWUAlh7VpE45HJIC8ipeiAimvPLjkGn6snZpnp</string>
+    <string name="back4app_server_url" translatable="false">https://parseapi.back4app.com/</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+
+
+    <string name="back4app_live_query_url" translatable="false">wss://nootify.back4app.io/</string>
+    <string name="word_hour">Hour</string>
+    <string name="title_activity_about_us" translatable="false">AboutUsActivity</string>
+
+</resources>

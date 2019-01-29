@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="@string/word_name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/service2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/name2"
+        android:layout_weight="1"
+        android:text="@string/word_services"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/date2"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/hour2"
+        android:layout_weight="1"
+        android:text="@string/word_date"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/hour2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/service2"
+        android:layout_weight="1"
+        android:text="@string/word_hour"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/status2"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/date2"
+        android:text="Status"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp" />
+
+</RelativeLayout>

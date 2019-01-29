@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "443927952622",
+    "firebase_url": "https://styleinbaku-cec06.firebaseio.com",
+    "project_id": "styleinbaku-cec06",
+    "storage_bucket": "styleinbaku-cec06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443927952622:android:b04764d6a121e6b9",
+        "android_client_info": {
+          "package_name": "styleIn.tunarmahmudov.styleIn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443927952622-vukngfq0k5eenv5l7i35p9fp34177jst.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "styleIn.tunarmahmudov.styleIn",
+            "certificate_hash": "f923aec9ee05d705f22121956bf910c191cb4214"
+          }
+        },
+        {
+          "client_id": "443927952622-dqbk4d1kv654tkh8tuvbo4vosglv47ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-sl802ZvJQa7KWoVlbBcOyeCKASyrlK4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443927952622-dqbk4d1kv654tkh8tuvbo4vosglv47ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

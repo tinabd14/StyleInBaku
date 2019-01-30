@@ -155,7 +155,6 @@ public class ServicesActivity extends AppCompatActivity {
                     tableDialog.setContentView(tableDialogView);
                     tableDialog.getWindow().setLayout(LinearLayoutCompat.LayoutParams.MATCH_PARENT, LinearLayoutCompat.LayoutParams.WRAP_CONTENT);
 
-
                     ArrayList<Object> n97 = new ArrayList<>();
                     ArrayList<Object> hours = new ArrayList<>();
 

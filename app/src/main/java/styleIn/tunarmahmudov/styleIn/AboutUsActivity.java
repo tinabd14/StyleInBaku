@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 public class AboutUsActivity extends AppCompatActivity {
 
+    public static final int REQUEST_CALL = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +27,7 @@ public class AboutUsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_us);
 
         setTitle(R.string.word_aboutUs);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto","styleinbaku1@gmail.com", null));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Android App");
-                startActivity(Intent.createChooser(emailIntent, "Send mail"));
-
-            }
-        });
+        showMessageButton();
     }
 
 
@@ -64,12 +50,25 @@ public class AboutUsActivity extends AppCompatActivity {
 
 
 
+    public void showMessageButton()
+    {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","styleinbaku1@gmail.com", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Android App");
+                startActivity(Intent.createChooser(emailIntent, "Send mail"));
 
+            }
+        });
+    }
 
-
-    public static final int REQUEST_CALL = 1;
 
     public void makeCall()
     {

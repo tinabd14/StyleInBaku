@@ -145,8 +145,6 @@ public class OfficeActivity extends AppCompatActivity implements View.OnClickLis
 
     public void fab(View view)
     {
-
-
         LayoutInflater inflater = getLayoutInflater();
         View tableDialogView = inflater.inflate(R.layout.table_layout, null);
         Dialog tableDialog = new Dialog(OfficeActivity.this);

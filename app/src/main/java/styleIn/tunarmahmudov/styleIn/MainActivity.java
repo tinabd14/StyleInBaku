@@ -1,18 +1,14 @@
 package styleIn.tunarmahmudov.styleIn;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.media.MediaPlayer;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,7 +19,6 @@ import android.widget.Toast;
 import com.google.android.gms.ads.MobileAds;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
-import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 
@@ -35,18 +30,13 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     private String userType = "customer";
     Switch userSwitch;
 
     private AdView mAdView;
     SharedPreferences settings;
 
-
     private Locale locale = null;
-
-
 
 
     @Override
@@ -59,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    //Change the language
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if(item.getItemId() == R.id.languageAze)
@@ -78,11 +69,50 @@ public class MainActivity extends AppCompatActivity {
             changeLanguage("ru");
         }
 
-
         return super.onOptionsItemSelected(item);
     }
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setUpSettings();
+        setContentView(R.layout.activity_main);
+        setUpAds();
+
+        userSwitch = (Switch) findViewById(R.id.userSwitch);
+
+        if(userSwitch.isChecked())
+        {
+            userType = "hairdresser";
+        }
+        else
+        {
+            userType = "customer";
+        }
+
+
+        Parse.initialize(this);
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
+        if(ParseUser.getCurrentUser() != null)
+        {
+            Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.word_welcomeBack) + ", " + ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_LONG).show();
+            if(ParseUser.getCurrentUser().getString("customerOrHairdresser").equals("customer"))
+            {
+                Intent i = new Intent(getApplicationContext(), MaleOrFemaleActivity.class);
+                startActivity(i);
+            }
+            else if(ParseUser.getCurrentUser().getString("customerOrHairdresser").equals("hairdresser"))
+            {
+                Intent i = new Intent(getApplicationContext(), OfficeActivity.class);
+                startActivity(i);
+            }
+        }
+
+        ParseAnalytics.trackAppOpenedInBackground(getIntent());
+    }
 
 
     public void changeLanguage(String lang)
@@ -108,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
     {
         MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
         mp.start();
+
         if(userSwitch.isChecked())
         {
             userType = "hairdresser";
@@ -123,14 +154,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
+    public void setUpSettings()
+    {
         settings = this.getSharedPreferences("styleIn.tunarmahmudov.styleIn", Context.MODE_PRIVATE);
         String lang = settings.getString("locale", "");
         Configuration config = getBaseContext().getResources().getConfiguration();
@@ -142,50 +167,17 @@ public class MainActivity extends AppCompatActivity {
             config.locale = locale;
             getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         }
+    }
 
 
-        setContentView(R.layout.activity_main);
-
-        userSwitch = (Switch) findViewById(R.id.userSwitch);
-
-        if(userSwitch.isChecked())
-        {
-            userType = "hairdresser";
-        }
-        else
-        {
-            userType = "customer";
-        }
-
+    public void setUpAds()
+    {
         MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.banner_ad_unit_id));
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-
-
-        Parse.initialize(this);
-        ParseInstallation.getCurrentInstallation().saveInBackground();
-
-        if(ParseUser.getCurrentUser() != null)
-        {
-            Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.word_welcomeBack) + ", " + ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_LONG).show();
-            if(ParseUser.getCurrentUser().getString("customerOrHairdresser").equals("customer"))
-            {
-                Intent i = new Intent(getApplicationContext(), MaleOrFemaleActivity.class);
-                startActivity(i);
-            }
-            else if(ParseUser.getCurrentUser().getString("customerOrHairdresser").equals("hairdresser"))
-            {
-                Intent i = new Intent(getApplicationContext(), OfficeActivity.class);
-                startActivity(i);
-            }
-        }
-
-        ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
-
 
 
     @Override
@@ -198,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton(getApplicationContext().getResources().getString(R.string.word_yes), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        //finish();
                         moveTaskToBack(true);
                     }
                 })

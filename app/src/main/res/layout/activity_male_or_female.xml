@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="femaleImageButtonPressed"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@color/ClaretRed" />
 
         <ImageButton
             android:id="@+id/maleImageButton4"
@@ -28,6 +28,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="maleImageButtonPressed"
-            android:src="@drawable/common_google_signin_btn_icon_light_focused" />
+            android:src="@color/colorPrimaryDark" />
     </LinearLayout>
 </RelativeLayout>
